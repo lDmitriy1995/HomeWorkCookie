@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Online Users";
+}
+
+<h1>Online Users</h1>
+
+<p>Online Users Count: @ViewData["OnlineUsersCount"]</p>
+
+<form method="post" action="/Home/AddUser">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Add User</button>
+</form>
+
+<form method="post" action="/Home/RemoveUser">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Remove User</button>
+</form>
